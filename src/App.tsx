@@ -6,55 +6,28 @@ const projects = [
   { name: "FinSight AI", description: "AI-powered personal finance and expense tracking app.", tags: ["React Native", "TypeScript", "AI"], status: "Coming soon" },
   { name: "FitTrack", description: "Fitness and progress tracking experience.", tags: ["React Native", "Expo", "Animations"], status: "Coming soon" },
 ];
-
-const expertise = [
-  "React Native", "TypeScript", "Expo", "Mobile Architecture",
-  "Performance Optimization", "Offline-first Apps", "Native Integrations",
-  "REST & GraphQL", "CI/CD", "iOS & Android",
-];
-
+const expertise = ["React Native", "TypeScript", "Expo", "Mobile Architecture", "Performance Optimization", "Offline-first Apps", "Native Integrations", "REST & GraphQL", "CI/CD", "iOS & Android"];
 const linkedin = "https://www.linkedin.com/in/shubham-mehta-654686148";
 
 function ResumePage() {
-  return (
-    <main className="resume-page">
-      <nav className="nav"><a className="brand" href="/">SM<span>.</span></a><a className="button secondary" href="/">Back to portfolio</a></nav>
-      <section className="resume-hero">
-        <p className="eyebrow">Curriculum Vitae</p><h1>Shubham Mehta</h1>
-        <p>Senior Mobile Engineer (React Native) · Technical Lead</p>
-        <div className="resume-links"><a href={linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="mailto:shubhammehta725@gmail.com">shubhammehta725@gmail.com</a></div>
-      </section>
-      <section className="resume-grid">
-        <div><p className="eyebrow">Profile</p><p>Senior Mobile Engineer and Technical Lead with 7.5+ years building production-grade React Native applications. Experienced in mobile architecture, offline-first systems, real-time synchronization, native integrations, performance optimization, CI/CD and end-to-end testing.</p></div>
-        <div><p className="eyebrow">Core skills</p><div className="tags resume-tags">{expertise.map(item => <span key={item}>{item}</span>)}</div></div>
-      </section>
-      <section className="resume-section"><p className="eyebrow">Experience</p>
-        <div className="resume-role"><div><h2>Software Project Lead</h2><span>Bechtel · 09/2025 — Present</span></div><p>Leading React Native application development, architecture, release lifecycle, CI/CD, performance work, testing automation and developer mentorship.</p></div>
-        <div className="resume-role"><div><h2>Senior Software Developer</h2><span>GSR Business Services · 12/2023 — 08/2025</span></div><p>React Native development across production mobile applications, native integrations, real-time updates, performance optimization and store releases.</p></div>
-        <div className="resume-role"><div><h2>Senior Software Developer / Mobile Lead</h2><span>Thoughts2Binary · 01/2019 — 11/2023</span></div><p>Led mobile development teams, owned architecture and releases, and built production React Native applications across payroll, fleet, tracking and order-management domains.</p></div>
-      </section>
-      <section className="resume-section"><p className="eyebrow">Education</p><div className="resume-role"><div><h2>B.Tech — Computer Science & Engineering</h2><span>The Technological Institute of Textile Sciences, Bhiwani · 2015 — 2019</span></div></div></section>
-    </main>
-  );
+  return <main className="resume-page">
+    <nav className="nav"><a className="brand" href="/">SM<span>.</span></a><a className="button secondary" href="/">Back to portfolio</a></nav>
+    <section className="resume-hero"><p className="eyebrow">Curriculum Vitae</p><h1>Shubham Mehta</h1><p>Senior Mobile Engineer (React Native) · Technical Lead</p><div className="resume-links"><a href={linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="mailto:shubhammehta725@gmail.com">shubhammehta725@gmail.com</a></div></section>
+    <section className="resume-grid"><div><p className="eyebrow">Profile</p><p>Senior Mobile Engineer and Technical Lead with 7.5+ years building production-grade React Native applications. Experienced in mobile architecture, offline-first systems, real-time synchronization, native integrations, performance optimization, CI/CD and end-to-end testing.</p></div><div><p className="eyebrow">Core skills</p><div className="tags resume-tags">{expertise.map(item => <span key={item}>{item}</span>)}</div></div></section>
+    <section className="resume-section"><p className="eyebrow">Experience</p><div className="resume-role"><div><h2>Software Project Lead</h2><span>Bechtel · 09/2025 — Present</span></div><p>Leading React Native application development, architecture, release lifecycle, CI/CD, performance work, testing automation and developer mentorship.</p></div><div className="resume-role"><div><h2>Senior Software Developer</h2><span>GSR Business Services · 12/2023 — 08/2025</span></div><p>React Native development across production mobile applications, native integrations, real-time updates, performance optimization and store releases.</p></div><div className="resume-role"><div><h2>Senior Software Developer / Mobile Lead</h2><span>Thoughts2Binary · 01/2019 — 11/2023</span></div><p>Led mobile development teams, owned architecture and releases, and built production React Native applications across payroll, fleet, tracking and order-management domains.</p></div></section>
+    <section className="resume-section"><p className="eyebrow">Education</p><div className="resume-role"><div><h2>B.Tech — Computer Science & Engineering</h2><span>The Technological Institute of Textile Sciences, Bhiwani · 2015 — 2019</span></div></div></section>
+  </main>;
 }
 
 export default function App() {
   if (window.location.pathname === "/resume") return <ResumePage />;
-  return (
-    <main>
-      <nav className="nav"><a className="brand" href="#">SM<span>.</span></a><div className="nav-links"><a href="#about">About</a><a href="#projects">Projects</a><a href="#expertise">Expertise</a><a href="#contact">Contact</a></div></nav>
-      <section className="hero">
-        <div className="hero-copy"><p className="eyebrow">Senior React Native Engineer · 7.5+ years</p><h1>I build mobile products people enjoy using.</h1><p className="hero-text">I design and engineer high-quality iOS and Android applications with React Native, TypeScript and modern mobile architecture.</p><div className="hero-actions"><a className="button primary" href="#projects">View projects</a><a className="button secondary" href="/resume" target="_blank" rel="noreferrer">View resume ↗</a></div></div>
-        <div className="hero-visual" aria-label="Abstract mobile engineering visual"><div className="visual-orbit orbit-one"/><div className="visual-orbit orbit-two"/><div className="visual-core"><span>RN</span><small>MOBILE<br/>ENGINEERING</small></div><div className="visual-chip chip-one">TS</div><div className="visual-chip chip-two">iOS</div><div className="visual-chip chip-three">Android</div></div>
-      </section>
-      <section id="about" className="section about">
-        <div className="about-photo"><img className="profile-photo" src={profileImage} alt="Shubham Mehta" /></div>
-        <div className="about-copy"><p className="eyebrow">About me</p><h2>Engineering with a product mindset.</h2><p>I’m a Senior React Native Engineer and Technical Lead focused on building reliable, scalable mobile experiences. I enjoy solving the difficult parts of mobile development — architecture, performance, offline behavior, native integrations and release quality.</p><div className="about-links"><a href={linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/shubhammehta78" target="_blank" rel="noreferrer">GitHub ↗</a></div></div>
-      </section>
-      <section id="projects" className="section"><div className="section-head"><p className="eyebrow">Selected work</p><h2>Independent products.</h2></div><div className="projects">{projects.map((project, index) => <article className="project" key={project.name}><div className="project-number">0{index + 1}</div><div className="project-body"><div className="project-meta"><span>{project.status}</span><span>Mobile app</span></div><h3>{project.name}</h3><p>{project.description}</p><div className="tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>{project.href && <a className="project-link" href={project.href} target="_blank" rel="noreferrer">View repository ↗</a>}</div></article>)}</div></section>
-      <section id="expertise" className="section expertise"><div className="section-head"><p className="eyebrow">Capabilities</p><h2>Built for real products.</h2></div><div className="expertise-grid">{expertise.map(item => <div className="expertise-item" key={item}>{item}<span>↗</span></div>)}</div></section>
-      <section id="contact" className="contact"><p className="eyebrow">Let's work together</p><h2>Have a mobile product<br/>in mind?</h2><a className="button primary" href="mailto:shubhammehta725@gmail.com">Get in touch ↗</a><div className="contact-links"><a href={linkedin} target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/shubhammehta78" target="_blank" rel="noreferrer">GitHub</a><a href="mailto:shubhammehta725@gmail.com">Email</a></div></section>
-      <footer><span>© {new Date().getFullYear()} Shubham Mehta</span><span>React Native · TypeScript · Mobile</span></footer>
-    </main>
-  );
+  return <main>
+    <nav className="nav"><a className="brand" href="#">SM<span>.</span></a><div className="nav-links"><a href="#about">About</a><a href="#projects">Projects</a><a href="#expertise">Expertise</a><a href="#contact">Contact</a></div></nav>
+    <section className="hero"><div className="hero-copy"><p className="eyebrow">Senior React Native Engineer · 7.5+ years</p><h1>I build mobile products people enjoy using.</h1><p className="hero-text">I design and engineer high-quality iOS and Android applications with React Native, TypeScript and modern mobile architecture.</p><div className="hero-actions"><a className="button primary" href="#projects">View projects</a><a className="button secondary" href="/resume" target="_blank" rel="noreferrer">View resume ↗</a></div></div><div className="hero-visual" aria-label="Abstract mobile engineering visual"><div className="visual-orbit orbit-one"/><div className="visual-orbit orbit-two"/><div className="visual-core"><span>RN</span><small>MOBILE<br/>ENGINEERING</small></div><div className="visual-chip chip-one">TS</div><div className="visual-chip chip-two">iOS</div><div className="visual-chip chip-three">Android</div></div></section>
+    <section id="about" className="section about"><div className="about-photo"><img src={profileImage} alt="Shubham Mehta" style={{width:"100%",maxWidth:360,aspectRatio:"4 / 5",objectFit:"cover",objectPosition:"center 30%",borderRadius:28,border:"1px solid #383a34",display:"block"}} /></div><div className="about-copy"><p className="eyebrow">About me</p><h2>Engineering with a product mindset.</h2><p>I’m a Senior React Native Engineer and Technical Lead focused on building reliable, scalable mobile experiences. I enjoy solving the difficult parts of mobile development — architecture, performance, offline behavior, native integrations and release quality.</p><div className="about-links"><a href={linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/shubhammehta78" target="_blank" rel="noreferrer">GitHub ↗</a></div></div></section>
+    <section id="projects" className="section"><div className="section-head"><p className="eyebrow">Selected work</p><h2>Independent products.</h2></div><div className="projects">{projects.map((project,index)=><article className="project" key={project.name}><div className="project-number">0{index+1}</div><div className="project-body"><div className="project-meta"><span>{project.status}</span><span>Mobile app</span></div><h3>{project.name}</h3><p>{project.description}</p><div className="tags">{project.tags.map(tag=><span key={tag}>{tag}</span>)}</div>{project.href&&<a className="project-link" href={project.href} target="_blank" rel="noreferrer">View repository ↗</a>}</div></article>)}</div></section>
+    <section id="expertise" className="section expertise"><div className="section-head"><p className="eyebrow">Capabilities</p><h2>Built for real products.</h2></div><div className="expertise-grid">{expertise.map(item=><div className="expertise-item" key={item}>{item}<span>↗</span></div>)}</div></section>
+    <section id="contact" className="contact"><p className="eyebrow">Let's work together</p><h2>Have a mobile product<br/>in mind?</h2><a className="button primary" href="mailto:shubhammehta725@gmail.com">Get in touch ↗</a><div className="contact-links"><a href={linkedin} target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/shubhammehta78" target="_blank" rel="noreferrer">GitHub</a><a href="mailto:shubhammehta725@gmail.com">Email</a></div></section>
+    <footer><span>© {new Date().getFullYear()} Shubham Mehta</span><span>React Native · TypeScript · Mobile</span></footer>
+  </main>;
 }

@@ -43,7 +43,7 @@ function ResumePage() {
       <p className="eyebrow">Professional experience</p>
 
       <div className="resume-role">
-        <div><h2>Software Project Lead</h2><span>Bechtel · Sep 2025 — Present</span></div>
+        <div><h2>Software Project Lead</h2><span>Sep 2025 — Present</span></div>
         <div>
           <ul>
             <li>Lead mobile engineering initiatives using React Native, TypeScript and modern mobile architecture patterns across iOS and Android.</li>
@@ -56,7 +56,7 @@ function ResumePage() {
       </div>
 
       <div className="resume-role">
-        <div><h2>Senior Software Developer</h2><span>GSR Business Services · Dec 2023 — Aug 2025</span></div>
+        <div><h2>Senior Software Developer</h2><span>Dec 2023 — Aug 2025</span></div>
         <div>
           <ul>
             <li>Built and maintained production React Native applications across iOS and Android with a strong focus on reliability and user experience.</li>
@@ -69,7 +69,7 @@ function ResumePage() {
       </div>
 
       <div className="resume-role">
-        <div><h2>Senior Software Developer / Mobile Lead</h2><span>Thoughts2Binary · Jan 2019 — Nov 2023</span></div>
+        <div><h2>Senior Software Developer / Mobile Lead</h2><span>Jan 2019 — Nov 2023</span></div>
         <div>
           <ul>
             <li>Developed and led React Native applications across multiple business domains including payroll, fleet, tracking and order-management workflows.</li>

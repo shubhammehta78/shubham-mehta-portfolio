@@ -11,7 +11,111 @@ const linkedin = "https://www.linkedin.com/in/shubham-mehta-654686148";
 const medium = "https://medium.com/@Thatreactnativeguy";
 
 function ResumePage() {
-  return <main className="resume-page"><nav className="nav"><a className="brand" href="/">SM<span>.</span></a><a className="button secondary" href="/">Back to portfolio</a></nav><section className="resume-hero"><p className="eyebrow">Curriculum Vitae</p><h1>Shubham Mehta</h1><p>Senior Mobile Engineer (React Native) · Technical Lead</p><div className="resume-links"><a href={linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="mailto:shubhammehta725@gmail.com">shubhammehta725@gmail.com</a></div></section><section className="resume-grid"><div><p className="eyebrow">Profile</p><p>Senior Mobile Engineer and Technical Lead with 7.5+ years building production-grade React Native applications. Experienced in mobile architecture, offline-first systems, real-time synchronization, native integrations, performance optimization, CI/CD and end-to-end testing.</p></div><div><p className="eyebrow">Core skills</p><div className="tags resume-tags">{expertise.map(item=><span key={item}>{item}</span>)}</div></div></section><section className="resume-section"><p className="eyebrow">Experience</p><div className="resume-role"><div><h2>Software Project Lead</h2><span>Bechtel · 09/2025 — Present</span></div><p>Leading React Native application development, architecture, release lifecycle, CI/CD, performance work, testing automation and developer mentorship.</p></div><div className="resume-role"><div><h2>Senior Software Developer</h2><span>GSR Business Services · 12/2023 — 08/2025</span></div><p>React Native development across production mobile applications, native integrations, real-time updates, performance optimization and store releases.</p></div><div className="resume-role"><div><h2>Senior Software Developer / Mobile Lead</h2><span>Thoughts2Binary · 01/2019 — 11/2023</span></div><p>Led mobile development teams, owned architecture and releases, and built production React Native applications across payroll, fleet, tracking and order-management domains.</p></div></section><section className="resume-section"><p className="eyebrow">Education</p><div className="resume-role"><div><h2>B.Tech — Computer Science & Engineering</h2><span>The Technological Institute of Textile Sciences, Bhiwani · 2015 — 2019</span></div></div></section></main>;
+  return <main className="resume-page">
+    <nav className="nav"><a className="brand" href="/">SM<span>.</span></a><a className="button secondary" href="/">Back to portfolio</a></nav>
+
+    <section className="resume-hero">
+      <p className="eyebrow">Curriculum Vitae</p>
+      <h1>Shubham Mehta</h1>
+      <p>Senior Mobile Engineer · React Native · Technical Lead</p>
+      <div className="resume-links">
+        <a href={linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a href="https://github.com/shubhammehta78" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a href={medium} target="_blank" rel="noreferrer">Medium ↗</a>
+        <a href="mailto:shubhammehta725@gmail.com">shubhammehta725@gmail.com</a>
+      </div>
+    </section>
+
+    <section className="resume-grid">
+      <div>
+        <p className="eyebrow">Professional summary</p>
+        <p>Senior Mobile Engineer and Technical Lead with 7.5+ years of experience designing, developing and shipping production-grade iOS and Android applications with React Native and TypeScript.</p>
+        <p>Strong focus on mobile architecture, performance, offline-first experiences, native integrations, API-driven applications, CI/CD, automated testing and reliable release processes. Comfortable owning features end-to-end while mentoring engineers and collaborating across product, design and engineering.</p>
+      </div>
+      <div>
+        <p className="eyebrow">Core technologies</p>
+        <div className="tags resume-tags">{expertise.map(item=><span key={item}>{item}</span>)}</div>
+        <div className="tags resume-tags"><span>JavaScript</span><span>GraphQL</span><span>Apollo</span><span>Firebase</span><span>Crashlytics</span><span>SQLite</span><span>AsyncStorage</span><span>Maestro</span><span>EAS</span><span>Git</span></div>
+      </div>
+    </section>
+
+    <section className="resume-section">
+      <p className="eyebrow">Professional experience</p>
+
+      <div className="resume-role">
+        <div><h2>Software Project Lead</h2><span>Bechtel · Sep 2025 — Present</span></div>
+        <div>
+          <ul>
+            <li>Lead mobile engineering initiatives using React Native, TypeScript and modern mobile architecture patterns across iOS and Android.</li>
+            <li>Own technical design, implementation, code quality, release readiness and production support for mobile features.</li>
+            <li>Work across application architecture, performance optimization, native integrations, CI/CD and automated testing.</li>
+            <li>Mentor developers, review technical solutions and help establish engineering practices for maintainable mobile codebases.</li>
+            <li>Collaborate with product and engineering stakeholders to translate requirements into scalable mobile solutions.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="resume-role">
+        <div><h2>Senior Software Developer</h2><span>GSR Business Services · Dec 2023 — Aug 2025</span></div>
+        <div>
+          <ul>
+            <li>Built and maintained production React Native applications across iOS and Android with a strong focus on reliability and user experience.</li>
+            <li>Implemented native mobile integrations and platform-specific functionality while keeping shared React Native architecture maintainable.</li>
+            <li>Worked with REST and GraphQL APIs, Apollo, Firebase/Crashlytics and asynchronous data flows.</li>
+            <li>Improved application performance, debugging workflows and production stability through profiling, monitoring and targeted optimization.</li>
+            <li>Contributed to CI/CD, EAS builds, store releases and end-to-end testing workflows.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="resume-role">
+        <div><h2>Senior Software Developer / Mobile Lead</h2><span>Thoughts2Binary · Jan 2019 — Nov 2023</span></div>
+        <div>
+          <ul>
+            <li>Developed and led React Native applications across multiple business domains including payroll, fleet, tracking and order-management workflows.</li>
+            <li>Owned mobile architecture, feature delivery, production releases and technical decisions across the application lifecycle.</li>
+            <li>Worked closely with backend and product teams on API contracts, data models, authentication and real-time application behavior.</li>
+            <li>Built reusable components and engineering patterns to improve consistency and development velocity across mobile products.</li>
+            <li>Supported junior and mid-level engineers through code reviews, technical guidance and hands-on problem solving.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section className="resume-section">
+      <p className="eyebrow">Technical strengths</p>
+      <div className="resume-strengths">
+        <div><h3>Mobile architecture</h3><p>Feature-based organization, reusable components, state management, navigation, API layers, persistence and scalable application structure.</p></div>
+        <div><h3>Performance</h3><p>Rendering optimization, startup performance, memory-aware implementation, profiling and practical optimization of production React Native apps.</p></div>
+        <div><h3>Offline-first</h3><p>Local persistence, network awareness, optimistic updates, synchronization queues, conflict handling and resilient mobile workflows.</p></div>
+        <div><h3>Native & platform</h3><p>iOS and Android integrations, native modules, SDK integrations, JSI/TurboModules/Fabric concepts and platform-specific debugging.</p></div>
+        <div><h3>Quality & delivery</h3><p>CI/CD, EAS builds, release management, crash monitoring, automated testing and production debugging with a quality-first mindset.</p></div>
+        <div><h3>Leadership</h3><p>Technical ownership, mentoring, code reviews, architecture discussions and collaboration across product, design, backend and engineering teams.</p></div>
+      </div>
+    </section>
+
+    <section className="resume-section">
+      <p className="eyebrow">Independent projects</p>
+      <div className="resume-projects">
+        <div><h3>ShopSphere</h3><span>React Native · TypeScript · REST</span><p>E-commerce mobile experience covering catalogue discovery, search, product details, cart, wishlist, checkout and persistent local state.</p></div>
+        <div><h3>StockPilot</h3><span>React Native · Expo · SQLite</span><p>Offline-first inventory and field-operations concept focused on local persistence, synchronization, optimistic updates and resilient workflows.</p></div>
+        <div><h3>FinSight AI</h3><span>React Native · TypeScript · AI</span><p>Personal finance concept combining expense tracking, dashboards, receipt capture and AI-assisted categorization and insights.</p></div>
+        <div><h3>FitTrack</h3><span>React Native · Expo · Animations</span><p>Fitness tracking concept covering workout plans, activity history, progress visualization, calendar workflows and offline usage.</p></div>
+      </div>
+    </section>
+
+    <section className="resume-section">
+      <p className="eyebrow">Education</p>
+      <div className="resume-role">
+        <div><h2>B.Tech — Computer Science & Engineering</h2><span>The Technological Institute of Textile Sciences, Bhiwani · 2015 — 2019</span></div>
+        <p>Computer Science and Engineering</p>
+      </div>
+    </section>
+
+    <section className="resume-section resume-footer-note">
+      <p>Portfolio: shubhammehta.vercel.app · Available for senior React Native, mobile engineering and technical leadership opportunities.</p>
+    </section>
+  </main>;
 }
 
 export default function App() {

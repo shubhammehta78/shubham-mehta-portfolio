@@ -1,4 +1,4 @@
-import { profileImage } from "./profileImage";
+import profileImage from "./Media.jpg";
 
 const projects = [
   { name: "ShopSphere", description: "E-commerce mobile app with search, cart, wishlist and checkout.", tags: ["React Native", "TypeScript", "REST"], status: "Building", href: "https://github.com/shubhammehta78/shopsphere-rn" },

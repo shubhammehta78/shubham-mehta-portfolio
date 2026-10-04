@@ -15,11 +15,11 @@ This portfolio showcases independent projects and intentionally does **not** exp
 
 ## Stack
 
-- Next.js
 - React
 - TypeScript
+- Vite
 - Custom CSS
-- Responsive, accessible web UI
+- Responsive web UI
 
 ## Run locally
 
@@ -28,13 +28,13 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000.
+Vite will print the local development URL in the terminal.
 
 ## Build
 
 ```bash
 npm run build
-npm start
+npm run preview
 ```
 
 ## Repository

@@ -5,7 +5,7 @@ const projects = [
     description:
       "A polished shopping experience focused on fast discovery, resilient state, offline-friendly caching and a clean checkout journey.",
     tags: ["React Native", "TypeScript", "REST", "State Management"],
-    accent: "commerce",
+    accent: "commerce",\n    href: "https://github.com/shubhammehta78/shopsphere-rn",\n    status: "Building",
   },
   {
     name: "StockPilot",
@@ -13,7 +13,7 @@ const projects = [
     description:
       "A mobile inventory workflow demonstrating local persistence, sync queues, optimistic updates, barcode scanning and conflict-aware synchronization.",
     tags: ["React Native", "Expo", "SQLite", "Offline-first"],
-    accent: "operations",
+    accent: "operations",\n    status: "Coming soon",
   },
   {
     name: "FinSight AI",
@@ -21,7 +21,7 @@ const projects = [
     description:
       "A personal finance companion with expense intelligence, dashboards, receipt capture and natural-language insights.",
     tags: ["React Native", "TypeScript", "AI", "Charts"],
-    accent: "ai",
+    accent: "ai",\n    status: "Coming soon",
   },
   {
     name: "FitTrack",
@@ -29,7 +29,7 @@ const projects = [
     description:
       "A mobile fitness experience for plans, workout history, progress visualisation, reminders and a focused daily workflow.",
     tags: ["React Native", "Expo", "Animations", "Notifications"],
-    accent: "fitness",
+    accent: "fitness",\n    status: "Coming soon",
   },
 ];
 
@@ -137,7 +137,7 @@ export default function Home() {
         <div className="project-grid">
           {projects.map((project, index) => (
             <article className={`project-card ${project.accent}`} key={project.name}>
-              <div className="project-number">0{index + 1}</div>
+              <div className="project-number">0{index + 1}</div>\n              <div className="project-status">{project.status}</div>
               <div className="project-art">
                 <div className="art-window"><span /><span /><span /></div>
                 <div className="art-line" />

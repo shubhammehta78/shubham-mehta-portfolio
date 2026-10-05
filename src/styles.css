@@ -193,3 +193,42 @@
 
 @media(max-width:800px){.hero-visual{transform:none!important}.ambient-one,.ambient-two,.grid-overlay{transform:none}.reveal-section,.project,.engineering-grid article,.expertise-item{filter:none}}
 @media(prefers-reduced-motion:reduce){.hero-visual,.ambient-one,.ambient-two,.grid-overlay{transform:none!important}}
+
+/* Showcase motion */
+:root{--scroll:0}
+.tech-marquee{position:relative;z-index:4;overflow:hidden;border-top:1px solid #ffffff0b;border-bottom:1px solid #ffffff0b;background:#0d0e0c;padding:18px 0}
+.marquee-track{width:max-content;display:flex;align-items:center;gap:28px;animation:marquee 28s linear infinite;white-space:nowrap}
+.marquee-track span{font:600 11px "Space Grotesk";letter-spacing:.16em;color:#777971}
+.marquee-track i{font-style:normal;color:#a9c7df;font-size:12px}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+.site-shell:after{content:"";position:fixed;left:0;top:0;width:calc(var(--scroll) * 100%);height:2px;background:#a9c7df;box-shadow:0 0 16px #a9c7df;z-index:100;pointer-events:none}
+
+.hero-visual{width:min(500px,100%);aspect-ratio:1;isolation:isolate}
+.visual-glow{position:absolute;width:70%;height:70%;border-radius:50%;background:radial-gradient(circle,#7fa8c940,transparent 65%);filter:blur(20px);animation:glowBreath 4s ease-in-out infinite}
+@keyframes glowBreath{0%,100%{transform:scale(.85);opacity:.55}50%{transform:scale(1.15);opacity:1}}
+.phone-frame{position:relative;width:235px;height:475px;border:1px solid #ffffff35;border-radius:34px;background:linear-gradient(145deg,#1c201e,#0c0e0d);box-shadow:0 35px 90px #0009,0 0 50px #8eb4cf16,inset 0 0 30px #ffffff05;transform:rotate(7deg);z-index:4;overflow:hidden;padding:30px 19px 18px;animation:phoneFloat 5s ease-in-out infinite}
+.phone-frame:before{content:"";position:absolute;inset:1px;border-radius:33px;background:linear-gradient(120deg,#ffffff0b,transparent 35%,#a9c7df08);pointer-events:none}
+.phone-notch{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:74px;height:20px;border-radius:20px;background:#080908}
+.phone-top{display:flex;justify-content:space-between;color:#686b65;font:600 8px "Space Grotesk";letter-spacing:.08em}
+.phone-title{font:500 31px/.9 "Space Grotesk";letter-spacing:-.06em;margin-top:48px;color:#e7e4dc}
+.phone-title b{color:#a9c7df}
+.phone-stat{margin-top:38px;border-top:1px solid #ffffff12;padding-top:12px;display:flex;align-items:center;gap:8px;color:#858780;font-size:9px}
+.phone-stat strong{margin-left:auto;font:600 22px "Space Grotesk";color:#e6e1d6}
+.phone-stat i{width:6px;height:6px;border-radius:50%;background:#8fd1ad;box-shadow:0 0 10px #8fd1ad;animation:livePulse 1.5s infinite}
+@keyframes livePulse{50%{opacity:.35;transform:scale(.7)}}
+.phone-chart{height:95px;margin:12px 0 20px;display:flex;align-items:end;gap:6px;border-bottom:1px solid #ffffff12}
+.phone-chart span{width:100%;border-radius:5px 5px 0 0;background:linear-gradient(to top,#5e7f96,#b4d1e4);animation:bars 2.2s ease-in-out infinite alternate}
+.phone-chart span:nth-child(1){height:35%;animation-delay:-.1s}.phone-chart span:nth-child(2){height:58%;animation-delay:-.4s}.phone-chart span:nth-child(3){height:45%;animation-delay:-.7s}.phone-chart span:nth-child(4){height:80%;animation-delay:-1s}.phone-chart span:nth-child(5){height:62%;animation-delay:-1.3s}.phone-chart span:nth-child(6){height:91%;animation-delay:-1.6s}.phone-chart span:nth-child(7){height:73%;animation-delay:-1.9s}
+@keyframes bars{to{transform:scaleY(.55);transform-origin:bottom}}
+.phone-row{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid #ffffff0d;color:#777971;font-size:9px}
+.phone-row b{color:#d9e5ed;font-weight:500}
+.phone-bottom{position:absolute;bottom:16px;left:18px;right:18px;display:flex;justify-content:space-between;color:#6f756f;font:500 7px "Space Grotesk";letter-spacing:.05em}
+.phone-bottom span:first-child{color:#a9c7df}
+.phone-back{position:absolute;width:220px;height:440px;border:1px solid #ffffff12;border-radius:34px;background:#151815;z-index:1}
+.phone-back-one{transform:rotate(-10deg) translate(-55px,15px);animation:backFloatOne 6s ease-in-out infinite}
+.phone-back-two{transform:rotate(16deg) translate(55px,30px);animation:backFloatTwo 7s ease-in-out infinite}
+@keyframes phoneFloat{0%,100%{transform:rotate(7deg) translateY(0)}50%{transform:rotate(4deg) translateY(-18px)}}
+@keyframes backFloatOne{50%{transform:rotate(-13deg) translate(-65px,4px)}}
+@keyframes backFloatTwo{50%{transform:rotate(19deg) translate(65px,42px)}}
+@media(max-width:800px){.phone-frame{transform:rotate(4deg) scale(.85)}.phone-back{transform:scale(.85)}.marquee-track{animation-duration:22s}}

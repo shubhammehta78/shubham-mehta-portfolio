@@ -181,13 +181,25 @@ export default function App() {
           </div>
         </div>
 
-        <div className="hero-visual" aria-label="Abstract mobile engineering visual">
-          <div className="visual-orbit orbit-one" />
-          <div className="visual-orbit orbit-two" />
-          <div className="visual-core"><span>RN</span><small>MOBILE<br />ENGINEERING</small></div>
+        <div className="hero-visual" aria-label="Interactive mobile engineering visual">
+          <div className="visual-glow" />
+          <div className="phone-back phone-back-one" />
+          <div className="phone-back phone-back-two" />
+          <div className="phone-frame">
+            <div className="phone-notch" />
+            <div className="phone-top"><span>09:41</span><span>● ●</span></div>
+            <div className="phone-title">Mobile<br /><b>systems.</b></div>
+            <div className="phone-stat"><span>Performance</span><strong>98.4</strong><i /></div>
+            <div className="phone-chart"><span /><span /><span /><span /><span /><span /><span /></div>
+            <div className="phone-row"><span>Architecture</span><b>Scalable</b></div>
+            <div className="phone-row"><span>Offline sync</span><b>Ready</b></div>
+            <div className="phone-bottom"><span>RN</span><span>TS</span><span>Expo</span><span>GraphQL</span></div>
+          </div>
           <div className="visual-chip chip-one">TS</div>
           <div className="visual-chip chip-two">iOS</div>
           <div className="visual-chip chip-three">Android</div>
+          <div className="visual-orbit orbit-one" />
+          <div className="visual-orbit orbit-two" />
         </div>
 
         <div className="hero-scroll">SCROLL TO EXPLORE <span>↓</span></div>

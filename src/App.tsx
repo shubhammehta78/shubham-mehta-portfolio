@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import profileImage from "./Media.jpg";
 
 const projects = [

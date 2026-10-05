@@ -127,6 +127,9 @@ export default function App() {
       root.style.setProperty("--my", String((event.clientY / window.innerHeight - 0.5) * 2));
     };
     window.addEventListener("mousemove", onMove, { passive: true });
+    const onScroll = () => root.style.setProperty("--scroll", String(window.scrollY / Math.max(1, document.documentElement.scrollHeight - window.innerHeight)));
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
 
     const observer = new IntersectionObserver(
       (entries) => entries.forEach((entry) => {
@@ -141,6 +144,7 @@ export default function App() {
 
     return () => {
       window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("scroll", onScroll);
       observer.disconnect();
     };
   }, []);
@@ -188,6 +192,8 @@ export default function App() {
 
         <div className="hero-scroll">SCROLL TO EXPLORE <span>↓</span></div>
       </section>
+
+      <section className="tech-marquee" aria-label="Technology stack"><div className="marquee-track"><span>REACT NATIVE</span><i>✦</i><span>TYPESCRIPT</span><i>✦</i><span>EXPO</span><i>✦</i><span>MOBILE ARCHITECTURE</span><i>✦</i><span>PERFORMANCE</span><i>✦</i><span>OFFLINE-FIRST</span><i>✦</i><span>GRAPHQL</span><i>✦</i><span>CI/CD</span><i>✦</i><span>REACT NATIVE</span><i>✦</i><span>TYPESCRIPT</span><i>✦</i></div></section>
 
       <section className="credibility">
         <div><strong>7.5+</strong><span>years building mobile</span></div>

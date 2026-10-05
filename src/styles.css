@@ -90,3 +90,68 @@
 @media(prefers-reduced-motion:reduce){
  *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
 }
+
+
+/* Visual redesign */
+.site-shell{position:relative;overflow:hidden;background:#111210}
+.grid-overlay{position:absolute;inset:0;pointer-events:none;opacity:.22;background-image:linear-gradient(#ffffff06 1px,transparent 1px),linear-gradient(90deg,#ffffff06 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(to bottom,#000 0%,transparent 45%)}
+.ambient{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;opacity:.32}
+.ambient-one{width:500px;height:500px;background:#426b8d;right:-180px;top:180px}
+.ambient-two{width:400px;height:400px;background:#6d5540;left:-220px;top:800px}
+.hero{position:relative;min-height:calc(100vh - 78px);padding:7vh 7vw 10vh;grid-template-columns:1.25fr .75fr;overflow:hidden}
+.hero:before{content:"";position:absolute;width:620px;height:620px;border:1px solid #ffffff09;border-radius:50%;right:-160px;top:50%;transform:translateY(-50%);box-shadow:0 0 0 80px #ffffff02,0 0 0 160px #ffffff015}
+.hero-copy{position:relative;z-index:2}
+.hero-kicker{display:flex;align-items:center;gap:12px;color:#72746d;font:500 10px "Space Grotesk";letter-spacing:.18em;margin-bottom:25px}
+.hero-kicker span{width:34px;height:1px;background:#a9c7df}
+.hero h1{font-size:clamp(58px,8.2vw,124px);line-height:.87;letter-spacing:-.075em;max-width:1050px}
+.hero h1 span{display:block;color:#777971}
+.hero h1 em{font-style:normal;color:#e7e4dc}
+.hero-text{font-size:18px;max-width:570px}
+.hero-actions{margin-top:35px}
+.hero-scroll{position:absolute;left:7vw;bottom:30px;color:#686a63;font:500 9px "Space Grotesk";letter-spacing:.16em;z-index:3}
+.hero-scroll span{margin-left:12px;color:#a9c7df;font-size:15px}
+.hero-visual{z-index:2}
+.visual-core{width:195px;height:195px;background:linear-gradient(145deg,#c5dcef,#88a9c1);box-shadow:0 0 100px #78a2c025}
+.credibility{position:relative;z-index:3;background:#111210}
+.credibility strong{font-size:27px}
+.about{position:relative}
+.about:before{content:"ABOUT / 01";position:absolute;right:7vw;top:60px;color:#555750;font:500 9px "Space Grotesk";letter-spacing:.18em}
+.about-photo{position:relative}
+.about-photo:after{content:"7.5+ YEARS";position:absolute;right:-20px;bottom:20px;background:#e6e1d6;color:#171815;padding:12px 14px;font:600 10px "Space Grotesk";letter-spacing:.12em;border-radius:3px;box-shadow:0 12px 35px #0005}
+.profile-photo{border-radius:8px;border-color:#44463f}
+.section{position:relative}
+.section-head h2{font-size:clamp(48px,6vw,86px)}
+.projects{border-top:1px solid #2b2c29}
+.project{min-height:390px;padding:45px 32px}
+.project h3{font-size:clamp(38px,4vw,58px);margin-top:58px}
+.project:nth-child(1){background:linear-gradient(135deg,#151613,#111210)}
+.project:nth-child(2){background:linear-gradient(135deg,#111210,#14171a)}
+.project:nth-child(3){background:linear-gradient(135deg,#151613,#161413)}
+.project:nth-child(4){background:linear-gradient(135deg,#111210,#151613)}
+.project:hover{transform:translateY(-5px);z-index:2;box-shadow:0 25px 70px #0005}
+.project:before{content:"";position:absolute;right:30px;top:30px;width:70px;height:70px;border:1px solid #ffffff0b;border-radius:50%;transition:transform .6s ease}
+.project:hover:before{transform:scale(2.2)}
+.writing{background:#0e0f0d}
+.writing-card{max-width:none;border-radius:5px;padding:55px;background:linear-gradient(120deg,#171815,#121310)}
+.writing-card h3{font-size:clamp(32px,4.5vw,62px)}
+.engineering{background:#141512}
+.engineering-grid article{min-height:220px;padding-top:42px}
+.engineering-grid h3{font-size:35px}
+.expertise{position:relative}
+.expertise:after{content:"CAPABILITIES / 05";position:absolute;right:7vw;top:125px;color:#777971;font:500 9px "Space Grotesk";letter-spacing:.18em}
+.expertise-item{font-size:clamp(24px,3vw,38px);padding:30px 0}
+.contact{position:relative;overflow:hidden;background:radial-gradient(circle at 50% 20%,#263642 0,#111210 42%)}
+.contact:before{content:"LET'S BUILD";position:absolute;left:50%;top:25px;transform:translateX(-50%);font:700 10vw "Space Grotesk";white-space:nowrap;color:#ffffff03;letter-spacing:-.08em}
+.contact h2{position:relative;font-size:clamp(58px,9vw,130px)}
+.contact .primary{position:relative;padding:18px 27px;font-size:15px}
+.nav{background:#111210d9;border-bottom-color:#ffffff12}
+.nav:after{content:"";position:absolute;left:7vw;right:7vw;bottom:-1px;height:1px;background:linear-gradient(90deg,#a9c7df,transparent 45%);opacity:.45}
+.reveal-section{opacity:0;transform:translateY(35px);transition:opacity .9s cubic-bezier(.2,.75,.25,1),transform .9s cubic-bezier(.2,.75,.25,1)}
+.reveal-section.is-visible{opacity:1;transform:none}
+@media(max-width:800px){
+ .hero{padding-top:65px;min-height:auto;padding-bottom:120px}.hero h1{font-size:clamp(52px,15vw,78px)}.hero-visual{margin-top:50px}.hero-scroll{display:none}
+ .hero:before{width:420px;height:420px;right:-230px}.ambient-one{width:300px;height:300px}
+ .about:before,.expertise:after{display:none}.about-photo:after{right:10px}
+ .project{min-height:330px;padding:34px 20px}.project h3{margin-top:40px}
+ .writing-card{padding:30px}.engineering-grid article{min-height:auto}
+}
